@@ -1,0 +1,519 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Language Switch Styles */
+.lang-switch {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #155d52;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #71118c;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(to right, #61c4db 0%, #61c4db 90%, #8667da 100%);
+    color: white;
+    height: 240px;
+    width: 100%;
+    position: relative;
+}
+
+.header-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.logo {
+    height: 240px;
+    width: auto;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+}
+
+.logo-text {
+    height: 240px;
+    width: auto;
+    object-fit: cover;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header-text {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Navigation Styles */
+.navbar {
+    background-color: #34495e;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.navbar-logo {
+    height: 70px;
+    width: auto;
+    position: absolute;
+    left: 0rem;
+}
+
+.navbar-links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #2c3e50;
+}
+
+.navbar a.right {
+    margin-left: auto;
+}
+
+/* Main Content Styles */
+main {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* First row (blue section) */
+.logone {
+    width: 100%;
+    background-color: #61c4db;
+    min-height: calc(100vh - 0px - 64px); /* Viewport height minus header and navbar */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logone img {
+    max-width: 100%;
+    height: auto;
+    opacity: 0.8;
+    position: relative;
+}
+
+.stacked-images {
+    position: relative;
+    width: 100%;  /* or whatever width you want */
+    height: auto;
+}
+
+.bottom-image {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    opacity: 0.7;  /* adjust transparency */
+    z-index: 1;
+}
+
+.top-image {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    opacity: 0.7;  /* adjust transparency */
+    z-index: 2;  /* higher than bottom image */
+}
+
+.overlapping-images {
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center; /* This centers the images in their grid cell */
+}
+
+.overlapped-image {
+    width: 100%;
+    height: auto;
+    grid-area: 1/1; /* This makes both images occupy the same grid cell */
+    opacity: 0.7;
+}
+.overlapped-image2 {
+    width: 40%;
+    height: auto;
+    grid-area: 1/1; /* This makes both images occupy the same grid cell */
+    opacity: 0.7;
+}
+
+/* Content row */
+.row.content-row {
+    width: 100%;
+    margin: 0;
+    padding: 2rem;
+    background-color: white;
+}
+
+.side {
+    flex: 1;
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.main {
+    flex: 2;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Image Styles */
+.profile-img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 50%;
+    margin: 1rem 0;
+}
+
+.featured-img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 3rem;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+article {
+    margin-bottom: 2rem;
+}
+
+/* About Section Styles */
+.about-section {
+    position: relative;
+}
+
+.about-preview {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.preview-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    position: relative;
+}
+
+.expand-button {
+    color: #61c4db;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
+
+.about-full {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.about-full.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.7);
+    transition: transform 0.3s ease;
+}
+
+.about-full.active .modal-content {
+    transform: scale(1);
+}
+
+.close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #2c3e50;
+}
+
+.profile-img-large {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto 1rem auto;
+    display: block;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 2rem 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 1rem;
+}
+
+.social-link:hover {
+    color: #3498db;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+.social-text {
+    font-size: 1rem;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        height: auto;
+    }
+
+    .header-content {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .logo {
+        position: static;
+        height: 80px;
+    }
+
+    .logo-text {
+        position: static;
+        transform: none;
+        height: auto;
+        max-height: 120px;
+    }
+
+    .header-text {
+        padding: 1rem;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .navbar-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 0rem;
+    }
+
+    .navbar-logo {
+        position: static;
+        margin-bottom: 0rem;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .side, .main {
+        width: 100%;
+    }
+
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .logone {
+        min-height: calc(100vh - 360px);
+    }
+}
+/* Add these styles to your CSS file */
+.scroll-arrow {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    cursor: pointer;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid white;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Add a class for when we want to hide the arrow */
+.scroll-arrow.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
