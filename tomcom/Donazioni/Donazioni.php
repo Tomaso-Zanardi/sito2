@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support Our Research - Donation</title>
-    <link rel="stylesheet" href="donation_styles.css">
+    <link rel="stylesheet" href="../CSS/global.css">
+    <link rel="stylesheet" href="../CSS/donations.css">
     <link rel="icon" type="image/x-icon" href="../favic.png">
 </head>
 <body>

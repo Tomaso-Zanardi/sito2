@@ -75,7 +75,7 @@ if(isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contatti</title>
     <link rel="icon" type="image/x-icon" href="../immagini/favic.png">
-    <link rel="stylesheet" href="../CSS/dstyles.css" media="all">
+    <link rel="stylesheet" href="../CSS/global.css" media="all">
     <link rel="stylesheet" href="../CSS/2.css" media="all">
     <style>
         body {

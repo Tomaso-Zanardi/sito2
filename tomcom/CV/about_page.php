@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Dr. [Your Name]</title>
-    <link rel="stylesheet" href="about_styles.css">
+    <link rel="stylesheet" href="../CSS/global.css">
+    <link rel="stylesheet" href="../CSS/cv.css">
     <link rel="icon" type="image/x-icon" href="../favic.png">
 </head>
 <body>

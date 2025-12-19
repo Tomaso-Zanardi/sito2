@@ -1,0 +1,162 @@
+/* Donation Page Specific Styles */
+
+.donation-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    background-color: #f8f9fa;
+}
+
+.donation-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.donation-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.donation-intro h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.donation-intro p {
+    color: #555;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Donation Methods */
+.donation-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.donation-option {
+    display: flex;
+}
+
+.donation-card {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.donation-card:hover {
+    border-color: #f7ae6b;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.payment-logo {
+    height: 50px;
+    width: auto;
+}
+
+.card-header h3 {
+    color: #2c3e50;
+    margin: 0;
+}
+
+.donation-card p {
+    color: #666;
+    margin: 1rem 0;
+}
+
+.donation-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+}
+
+.paypal-btn {
+    background-color: #0070ba;
+    color: white;
+}
+
+.paypal-btn:hover {
+    background-color: #005a94;
+    transform: translateY(-2px);
+}
+
+.bank-btn {
+    background: linear-gradient(to right, #f7ae6b, #b8e6f7);
+    color: white;
+}
+
+.bank-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Bank Transfer Details */
+.bank-details {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    text-align: left;
+    display: none;
+}
+
+.bank-details.active {
+    display: block;
+}
+
+.bank-details p {
+    margin: 0.5rem 0;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+}
+
+/* Contact Info */
+.donation-contact {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid #e0e0e0;
+}
+
+.donation-contact h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.donation-contact p {
+    color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .donation-methods {
+        grid-template-columns: 1fr;
+    }
+
+    .donation-content {
+        padding: 2rem 1rem;
+    }
+}
