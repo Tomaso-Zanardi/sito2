@@ -51,6 +51,37 @@ body {
     gap: 0.5rem;
 }
 
+/* Hamburger Menu Button (hidden by default) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
 .switch {
     position: relative;
     display: inline-block;
@@ -205,48 +236,179 @@ input:checked + .slider:before {
 
 .social-link:hover {
     color: #3498db;
-    transform: scale(1.1);
+    transform: scale(1.2);
     transition: all 0.3s ease;
 }
 
 .social-text {
-    font-size: 1rem;
+    display: none;
 }
 
 .social-icon {
-    width: 24px;
-    height: 24px;
+    width: 36px;
+    height: 36px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem;
+    }
+
     .navbar-container {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        gap: 0rem;
+        position: relative;
     }
 
     .navbar-logo {
         position: static;
-        margin-bottom: 0rem;
+        height: 50px;
     }
 
+    /* Show hamburger menu */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hide links by default on mobile */
     .navbar-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #34495e;
         flex-direction: column;
-        align-items: center;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-links.active {
+        max-height: 500px;
+    }
+
+    .navbar-links a {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1rem;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .social-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
     }
 
     .page-header h1,
     .blog-header h1,
     .about-header h1,
-    .donation-header h1 {
+    .donation-header h1,
+    .gallery-header h1 {
         font-size: 2rem;
+        padding: 2rem 1rem;
+    }
+
+    .page-header p,
+    .blog-header p,
+    .gallery-header p {
+        font-size: 1rem;
+    }
+
+    .footer {
+        padding: 2rem 1rem;
+    }
+
+    .social-link {
+        font-size: 0.9rem;
+    }
+
+    .social-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Toggles - Stack vertically on mobile */
+    .night-mode-toggle {
+        right: 0.5rem;
+        top: 0.5rem;
+    }
+
+    .lang-switch {
+        right: 0.5rem;
+        top: 3.5rem;
+    }
+
+    .night-mode-toggle span,
+    .lang-switch span {
+        font-size: 1rem;
+    }
+
+    .switch {
+        width: 45px;
+        height: 24px;
+    }
+
+    .slider:before {
+        height: 18px;
+        width: 18px;
+        left: 3px;
+        bottom: 3px;
+    }
+
+    input:checked + .slider:before {
+        transform: translateX(21px);
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .navbar-links a {
+        padding: 0.8rem;
+        font-size: 0.95rem;
+    }
+
+    .page-header h1,
+    .blog-header h1,
+    .about-header h1,
+    .donation-header h1,
+    .gallery-header h1 {
+        font-size: 1.6rem;
+        padding: 1.5rem 0.5rem;
+    }
+
+    .night-mode-toggle {
+        right: 0.5rem;
+        top: 0.5rem;
+    }
+
+    .lang-switch {
+        right: 0.5rem;
+        top: 3rem;
+    }
+
+    .switch {
+        width: 40px;
+        height: 22px;
+    }
+
+    .slider:before {
+        height: 16px;
+        width: 16px;
+    }
+
+    input:checked + .slider:before {
+        transform: translateX(18px);
+    }
+
+    .night-mode-toggle span,
+    .lang-switch span {
+        font-size: 0.9rem;
     }
 }
 

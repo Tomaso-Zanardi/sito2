@@ -263,18 +263,59 @@ article {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .row {
+    /* Navigation */
+    .navbar-container {
         flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .navbar-logo {
+        height: 50px;
+        position: static;
+        margin: 0 auto;
+    }
+
+    .navbar-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+    }
+
+    .navbar-links a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    /* Hero section - Minimize on mobile */
+    .logone {
+        min-height: 30vh;
+        padding: 1rem;
+    }
+
+    .hero-name {
+        font-size: 2rem;
+        margin-top: 2rem;
+        letter-spacing: 0.05em;
+    }
+
+    .scroll-arrow {
+        display: none;
+    }
+
+    /* Content layout */
+    .row.content-row {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
     }
 
     .side, .main {
         width: 100%;
+        padding: 1.5rem;
     }
 
-    .logone {
-        min-height: calc(100vh - 360px);
-    }
-
+    /* Images */
     .profile-img {
         width: 150px;
         height: 150px;
@@ -285,7 +326,85 @@ article {
         height: 180px;
     }
 
+    .featured-img {
+        max-width: 100%;
+    }
+
+    /* Modal */
+    .modal-content {
+        width: 95%;
+        padding: 1.5rem;
+        max-height: 85vh;
+    }
+
+    .close-button {
+        font-size: 1.5rem;
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+
+    /* Typography */
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    section {
+        margin-bottom: 2rem;
+    }
+
+    article {
+        margin-bottom: 1.5rem;
+    }
+
     .authors-container {
         gap: 1rem;
+    }
+}
+
+/* Small mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    /* Hide hero section completely on small mobile */
+    .logone {
+        display: none;
+    }
+
+    .hero-name {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .navbar-links {
+        gap: 0.3rem;
+    }
+
+    .navbar-links a {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.85rem;
+    }
+
+    .side, .main {
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-img-large {
+        width: 200px;
+        height: 150px;
     }
 }
