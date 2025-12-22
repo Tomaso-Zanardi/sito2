@@ -136,3 +136,11 @@ body {
     background-color: #30aada;
     color: white;
   }
+
+/* Honeypot field - hide from humans but keep in DOM for bots */
+.honeypot {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    pointer-events: none;
+}

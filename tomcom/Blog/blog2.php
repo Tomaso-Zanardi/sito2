@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="lang-switch">
-        <span>�🇹</span>
+        <span>🇮🇹</span>
         <label class="switch">
             <input type="checkbox" onchange="window.location.href = this.checked ? '../en/Blog/blog2.php' : '../Blog/blog2.php'">
             <span class="slider round"></span>
@@ -40,7 +40,7 @@
     <!-- Secondary Banner - Easy to show/hide by commenting out -->
     <div class="secondary-banner">
         <div class="secondary-banner-content">
-            <p><strong>Ultimo Aggiornamento:</strong> Benvenuto nel nostro blog aggiornato! Scopri i nostri ultimi risultati di ricerca.</p>
+            <p><strong>Ultimo Aggiornamento:</strong> Benvenuto nel mio blog! Scopri i miei ultimi post</p>
         </div>
     </div>
     <!-- End Secondary Banner -->

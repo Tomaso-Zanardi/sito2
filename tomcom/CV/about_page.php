@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="lang-switch">
-        <span>�🇹</span>
+        <span>🇮🇹</span>
         <label class="switch">
             <input type="checkbox" onchange="window.location.href = this.checked ? '../en/CV/about_page.php' : '../CV/about_page.php'">
             <span class="slider round"></span>
@@ -47,11 +47,10 @@
                     </div>
                     <div class="profile-text">
                         <h2>Benvenuto</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        <p>Benvenuto nel mio sito personale. Mi chiamo Tomaso, sono uno scienziato cognitivo e ricercatore al Social Intelligence Lab, presso la Humboldt Universität di Berlino.</p>
+                        <p>Sono appassionato di filosofia della mente, neuroscienze e tecnologia, per quanto questo sia un sito personale qui puoi trovare il mio Curriculum Vitae e altre informazioni su di me, qualora possa interessarti una collaborazione scientifica o professionale.</p>
+                        <p>La mia ricerca verte primariamente sui meccanismi di formazione delle intenzioni ed i loro correlati fisiologici, in particolare microsaccadi e pupillometria.</p>
+                        <p>Ho anche un interesse per le tecnologie immersive come la realtà virtuale e gli stati alterati di coscienza indotti da sostanze psichedeliche. Inoltre sono un meditatore con una mente scientifica sciettica e da un paio di anni collaboro con la Yogalife Foundation, con la quale stiamo sviluppando esperimenti per misurare gli effetti cognitivi, propriocettivi e interocettivi dello yoga sulla mente umana.</p>
                     </div>
                 </div>
             </section>

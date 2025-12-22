@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="lang-switch">
-        <span>�🇹</span>
+        <span>🇮🇹</span>
         <label class="switch">
             <input type="checkbox" onchange="window.location.href = this.checked ? '../en/Donazioni/Donazioni.php' : '../Donazioni/Donazioni.php'">
             <span class="slider round"></span>
@@ -33,14 +33,14 @@
 
     <header class="donation-header">
         <h1>Sostieni la Nostra Ricerca</h1>
-        <p>Il tuo contributo aiuta a far progredire la scoperta scientifica e l'innovazione</p>
+        <p>Il tuo contributo aiuta la mia ricerca e la mia opera di divulgazione scientifica</p>
     </header>
 
     <main class="donation-content">
         <div class="donation-container">
             <div class="donation-intro">
                 <h2>Fai la Differenza</h2>
-                <p>Sostieni i nostri progetti di ricerca in corso e aiutaci a continuare a spingere i confini della conoscenza scientifica. Ogni contributo, indipendentemente dalla dimensione, ha un impatto significativo.</p>
+                <p>Sostieni i nostri progetti di ricerca. Ogni contributo, indipendentemente dalla dimensione, ha un impatto significativo.</p>
             </div>
 
             <div class="donation-methods">
@@ -68,12 +68,12 @@
                         <p>Bonifico bancario diretto tramite IBAN</p>
                         <div class="iban-details">
                             <strong>IBAN:</strong>
-                            <div class="iban-code" id="ibanCode">IT00 X000 0000 0000 0000 0000 000</div>
+                            <div class="iban-code" id="ibanCode">DE40 1001 2345 0694 4444 11</div>
                             <button class="copy-btn" onclick="copyIBAN()">Copia IBAN</button>
                         </div>
                         <div class="bank-info">
-                            <p><strong>Intestatario:</strong> Your Name/Organization</p>
-                            <p><strong>Banca:</strong> Your Bank Name</p>
+                            <p><strong>Intestatario:</strong> Nome/Organizzazione</p>
+                            <p><strong>Banca:</strong> Nome della Banca</p>
                             <p><strong>Causale:</strong> Donazione Ricerca</p>
                         </div>
                     </div>
@@ -81,7 +81,7 @@
             </div>
 
             <div class="donation-footer">
-                <p>Grazie per aver sostenuto la ricerca scientifica! La tua generosità ci permette di continuare il nostro importante lavoro.</p>
+                <p>Grazie per aver sostenuto la mia ricerca! La tua generosità mi permette di continuare il mio lavoro.</p>
                 <div class="contact-info">
                     <p>Per domande sulle donazioni, <a href="../contatti/FORMA.php">contattaci</a>.</p>
                 </div>

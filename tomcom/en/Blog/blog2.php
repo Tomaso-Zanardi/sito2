@@ -40,7 +40,7 @@
     <!-- Secondary Banner - Easy to show/hide by commenting out -->
     <div class="secondary-banner">
         <div class="secondary-banner-content">
-            <p><strong>Latest Update:</strong> Welcome to our updated blog! Check out our latest research findings.</p>
+            <p><strong>Latest Update:</strong> Welcome to my blog! Check out my latest posts</p>
         </div>
     </div>
     <!-- End Secondary Banner -->

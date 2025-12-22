@@ -97,7 +97,7 @@ if(isset($_POST['submit'])) {
 </head>
 <body>
     <div class="lang-switch">
-        <span>�🇹</span>
+        <span>🇮🇹</span>
         <label class="switch">
             <input type="checkbox" onchange="window.location.href = this.checked ? '../en/contatti/FORMA.php' : '../contatti/FORMA.php'">
             <span class="slider round"></span>

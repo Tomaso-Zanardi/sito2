@@ -33,14 +33,14 @@
 
     <header class="donation-header">
         <h1>Support Our Research</h1>
-        <p>Your contribution helps advance scientific discovery and innovation</p>
+        <p>Your contribution helps my research and scientific outreach</p>
     </header>
 
     <main class="donation-content">
         <div class="donation-container">
             <div class="donation-intro">
                 <h2>Make a Difference</h2>
-                <p>Support our ongoing research projects and help us continue pushing the boundaries of scientific knowledge. Every contribution, no matter the size, makes a meaningful impact.</p>
+                <p>Support our ongoing research projects. Every contribution, no matter the size, makes a meaningful impact.</p>
             </div>
 
             <div class="donation-methods">
@@ -81,7 +81,7 @@
             </div>
 
             <div class="donation-footer">
-                <p>Thank you for supporting scientific research! Your generosity enables us to continue our important work.</p>
+                <p>Thank you for supporting my research! Your generosity enables me to continue my work.</p>
                 <div class="contact-info">
                     <p>For questions about donations, please <a href="../contatti/FORMA.php">contact us</a>.</p>
                 </div>

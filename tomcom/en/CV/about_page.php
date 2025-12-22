@@ -47,11 +47,11 @@
                     </div>
                     <div class="profile-text">
                         <h2>Welcome</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        <p>Welcome to my personal website. My name is Tomaso, I am a cognitive scientist and researcher at the Social Intelligence Lab, Humboldt University of Berlin.</p>
+                        <p>I am passionate about philosophy of mind, neuroscience, and technology. Although this is a personal website, here you can find my Curriculum Vitae and other information about me, in case you are interested in scientific or professional collaboration.</p>
+                        <p>My research primarily focuses on the mechanisms of intention formation and their physiological correlates, particularly microsaccades and pupillometry.</p>
+                        <p>I also have an interest in immersive technologies such as virtual reality and altered states of consciousness induced by psychedelic substances. Additionally, I am a meditator with a scientific skeptical mind, and for a couple of years I have been collaborating with the Yogalife Foundation, with which we are developing experiments to measure the cognitive, proprioceptive, and interoceptive effects of yoga on the human mind.</p>
+                    </div>
                     </div>
                 </div>
             </section>

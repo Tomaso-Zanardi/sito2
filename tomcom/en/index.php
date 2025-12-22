@@ -71,7 +71,7 @@
                     <div style="margin-top: 2rem;">
                         <h3>Personal Gallery</h3>
                         <p>Some photos from the woods and relaxing images.</p>
-                        <a href="galleria_personale/galleria.html" style="display: inline-block; margin-top: 1rem; padding: 0.8rem 1.5rem; background: linear-gradient(to right, #f7ae6b, #61c4db); color: white; text-decoration: none; border-radius: 8px; font-weight: 500; transition: transform 0.3s;">
+                        <a href="../galleria_personale/galleria.html?lang=en" style="display: inline-block; margin-top: 1rem; padding: 0.8rem 1.5rem; background: linear-gradient(to right, #f7ae6b, #61c4db); color: white; text-decoration: none; border-radius: 8px; font-weight: 500; transition: transform 0.3s;">
                             Visit Gallery →
                         </a>
                     </div>

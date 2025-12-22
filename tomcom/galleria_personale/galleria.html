@@ -168,9 +168,9 @@
 </head>
 <body>
     <div class="lang-switch">
-        <span>�🇹</span>
+        <span>🇮🇹</span>
         <label class="switch">
-            <input type="checkbox" onchange="window.location.href = this.checked ? '../en/galleria_personale/galleria.html' : '../galleria_personale/galleria.html'">
+            <input type="checkbox" id="langToggle" onchange="toggleLanguage()">
             <span class="slider round"></span>
         </label>
         <span>🇬🇧</span>
@@ -179,7 +179,7 @@
     <nav class="navbar">
         <div class="navbar-container">
             <img src="../immagini/Ahimsa.png" alt="Navbar Logo" class="navbar-logo">
-            <div class="navbar-links">
+            <div class="navbar-links" id="navLinks">
                 <a href="../index.php">Home</a>
                 <a href="../CV/about_page.php">Curriculum Vitae</a>
                 <a href="../Biblioteca/login.html">Biblioteca</a>
@@ -191,8 +191,8 @@
     </nav>
 
     <header class="gallery-header">
-        <h1>Galleria Personale</h1>
-        <p>Foto dal bosco e momenti di natura</p>
+        <h1 id="galleryTitle">Galleria Personale</h1>
+        <p id="gallerySubtitle">Foto dal bosco e momenti di natura</p>
     </header>
 
     <div class="gallery-container">
@@ -271,6 +271,64 @@
     </div>
 
     <script>
+        // Language detection and switching
+        const urlParams = new URLSearchParams(window.location.search);
+        const currentLang = urlParams.get('lang') || 'it';
+        
+        const content = {
+            it: {
+                title: 'Galleria Personale',
+                subtitle: 'Foto dal bosco e momenti di natura',
+                navLinks: [
+                    { href: '../index.php', text: 'Home' },
+                    { href: '../CV/about_page.php', text: 'Curriculum Vitae' },
+                    { href: '../Biblioteca/login.html', text: 'Biblioteca' },
+                    { href: '../Blog/blog2.php', text: 'Blog' },
+                    { href: '../contatti/FORMA.php', text: 'Contatti' },
+                    { href: '../Donazioni/Donazioni.php', text: 'Donazioni' }
+                ]
+            },
+            en: {
+                title: 'Personal Gallery',
+                subtitle: 'Photos from the woods and moments in nature',
+                navLinks: [
+                    { href: '../en/index.php', text: 'Home' },
+                    { href: '../en/CV/about_page.php', text: 'Curriculum Vitae' },
+                    { href: '../en/Biblioteca/login.html', text: 'Library' },
+                    { href: '../en/Blog/blog2.php', text: 'Blog' },
+                    { href: '../en/contatti/FORMA.php', text: 'Contact' },
+                    { href: '../en/Donazioni/Donazioni.php', text: 'Donations' }
+                ]
+            }
+        };
+        
+        function setLanguage(lang) {
+            // Update page content
+            document.getElementById('galleryTitle').textContent = content[lang].title;
+            document.getElementById('gallerySubtitle').textContent = content[lang].subtitle;
+            
+            // Update navbar links
+            const navLinksContainer = document.getElementById('navLinks');
+            navLinksContainer.innerHTML = '';
+            content[lang].navLinks.forEach(link => {
+                const a = document.createElement('a');
+                a.href = link.href;
+                a.textContent = link.text;
+                navLinksContainer.appendChild(a);
+            });
+            
+            // Update toggle checkbox
+            document.getElementById('langToggle').checked = (lang === 'en');
+        }
+        
+        function toggleLanguage() {
+            const newLang = currentLang === 'it' ? 'en' : 'it';
+            window.location.href = `galleria.html?lang=${newLang}`;
+        }
+        
+        // Initialize page with correct language
+        setLanguage(currentLang);
+        
         const images = [
             '../galleria/1.JPG', '../galleria/2.JPG', '../galleria/3.JPG', '../galleria/4.JPG',
             '../galleria/5.JPG', '../galleria/6.JPG', '../galleria/7.JPG', '../galleria/8.JPG',
