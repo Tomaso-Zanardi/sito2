@@ -1,5 +1,20 @@
 /* Global Styles - Shared across all pages */
 
+/* Internet Font */
+@font-face {
+    font-family: 'Internet';
+    src: url('../fonts/LT Internet 400.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Internet';
+    src: url('../fonts/LT Internet Bold 700.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,7 +25,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Internet', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
 }
 
@@ -125,7 +140,7 @@ input:checked + .slider:before {
 .blog-header,
 .about-header,
 .donation-header {
-    background: linear-gradient(to right, #f7ae6b, #b8e6f7);
+    background: linear-gradient(to right, #f7ae6b, #61c4db);
     color: white;
     padding: 3rem 2rem;
     text-align: center;

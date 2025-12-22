@@ -7,6 +7,11 @@ function getLatestPosts($directories) {
             $files = glob($dir . "/*.html");
             
             foreach ($files as $file) {
+                // Skip files in the 'en' folder
+                if (strpos($file, '/en/') !== false) {
+                    continue;
+                }
+                
                 $content = file_get_contents($file);
                 
                 // Extract title and preview

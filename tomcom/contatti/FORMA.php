@@ -90,12 +90,21 @@ if(isset($_POST['submit'])) {
             justify-content: center;
             align-items: center;
             min-height: calc(100vh - 80px);
-            background: linear-gradient(to right, #f7ae6b, #b8e6f7);
+            background: linear-gradient(to right, #f7ae6b, #61c4db);
             padding: 2rem 0;
         }
     </style>
 </head>
 <body>
+    <div class="lang-switch">
+        <span>�🇹</span>
+        <label class="switch">
+            <input type="checkbox" onchange="window.location.href = this.checked ? '../en/contatti/FORMA.php' : '../contatti/FORMA.php'">
+            <span class="slider round"></span>
+        </label>
+        <span>🇬🇧</span>
+    </div>
+
     <nav class="navbar">
         <div class="navbar-container">
             <img src="../immagini/Ahimsa.png" alt="Navbar Logo" class="navbar-logo">

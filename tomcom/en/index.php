@@ -36,7 +36,8 @@
             <div class="logone">
                 <div class="overlapping-images">
                     <!--img src="../immagini/OI000043.JPG" alt="Bottom Image" class="overlapped-image"-->
-                    <img src="../immagini/Ahimsa.png" alt="Top Image" class="overlapped-image2" style="width: 10%;">
+                    <!--img src="../immagini/Ahimsa.png" alt="Top Image" class="overlapped-image2" style="width: 10%;"-->
+                    <h1 class="hero-name">Tomaso Zanardi</h1>
                 </div>
                 <div class="scroll-arrow">
                     <div class="arrow-down"></div>
@@ -61,7 +62,8 @@
                             <img src="../immagini/OI000043.JPG" alt="Tomaso Zanardi" class="profile-img-large">
                             <h2>About Me</h2>
                             <p>'The industrial revolution and its consequences have been a disaster for the human race...'</p>
-                            <p>(I do not condone by any means Ted Kaczynski's actions, but I believe his analysis of the destructive impact of technology to be truer by the day)</p>
+                            <p>(Joke aside, in my blog you'll find some reflections on the harmful effects of technology on society and the human mind, but I do not condone in any way the actions of Ted Kaczynski.)</p>
+                            <p>Thanks for stopping by my site! I'm a researcher, Ph.D. candidate at Humboldt Universität zu Berlin, working on free will and the mechanisms of intention formation. I have other interests that don't directly relate to my research project, but fall within the scope of cognitive science; particularly theories of consciousness, representationality in artificial systems, contemplative practices, and altered states of consciousness. I collaborate with the Yogalife Foundation on their research into yoga and its effects on the human mind. Other more general interests you can discover by exploring the site include trekking, weightlifting, various forms of grappling and wrestling, cooking, and how to help little humans grow up and become happy, resilient, intelligent, and conscious adults.</p>
                         </div>
                     </div>
                     
@@ -69,7 +71,7 @@
                     <div style="margin-top: 2rem;">
                         <h3>Personal Gallery</h3>
                         <p>Some photos from the woods and relaxing images.</p>
-                        <a href="galleria_personale/galleria.html" style="display: inline-block; margin-top: 1rem; padding: 0.8rem 1.5rem; background: linear-gradient(to right, #f7ae6b, #b8e6f7); color: white; text-decoration: none; border-radius: 8px; font-weight: 500; transition: transform 0.3s;">
+                        <a href="galleria_personale/galleria.html" style="display: inline-block; margin-top: 1rem; padding: 0.8rem 1.5rem; background: linear-gradient(to right, #f7ae6b, #61c4db); color: white; text-decoration: none; border-radius: 8px; font-weight: 500; transition: transform 0.3s;">
                             Visit Gallery →
                         </a>
                     </div>
@@ -89,12 +91,12 @@
                 <section class="articles-section">
                     <h2>Latest Content</h2>
                     <?php
-                    require_once '../content-handler.php';
+                    require_once '../content-handler-en.php';
                     
                     $directories = array(
-                        '../Blog/POSTS',
-                        '../Podcast/POSTS',
-                        '../Projectorium/POSTS'
+                        'Blog/POSTS',
+                        'Podcast/POSTS',
+                        'Projectorium/POSTS'
                     );
                     
                     $latestPosts = getLatestPosts($directories);

@@ -10,12 +10,12 @@
 </head>
 <body>
     <div class="lang-switch">
-        <span>🇬🇧</span>
+        <span>�🇹</span>
         <label class="switch">
-            <input type="checkbox" onchange="window.location.href = this.checked ? 'ita/indexita.html' : '/'">
+            <input type="checkbox" onchange="window.location.href = this.checked ? 'en/index.php' : 'index.php'">
             <span class="slider round"></span>
         </label>
-        <span>🇮🇹</span>
+        <span>🇬🇧</span>
     </div>
 
     <nav class="navbar">
@@ -35,8 +35,9 @@
         <div class="row">
             <div class="logone">
                 <div class="overlapping-images">
-                    <!--img src="immagini/OI000043.JPG" alt="Bottom Image" class="overlapped-image"-->
-                    <img src="immagini/Ahimsa.png" alt="Top Image" class="overlapped-image2" style="width: 10%;">
+                     <!--img src="../immagini/OI000043.JPG" alt="Bottom Image" class="overlapped-image"-->
+                    <!--img src="../immagini/Ahimsa.png" alt="Top Image" class="overlapped-image2" style="width: 10%;"-->
+                    <h1 class="hero-name">Tomaso Zanardi</h1>
                 </div>
                 <div class="scroll-arrow">
                     <div class="arrow-down"></div>
@@ -67,35 +68,19 @@
                             <img src="immagini/OI000043.JPG" alt="Tomaso Zanardi" class="profile-img-large">
                             <h2>About Me</h2>
                             <p>'The industrial revolution and its consequences have been a disaster for the human race...'</p>
-                            <p>(I do not condone by any mean Ted Kazinsky's actions, but I believe his analisis of the destructive impact of technology to be more true by the day)</p>
+                            <p>(Gag a parte, nel mio blog troverete alcune riflessioni sugli effetti dannosi della tecnologia sulla società e sulla mente umana, ma non condono in alcun modo le azioni di Ted Kaczynski.)</p>
+                            <p>Grazie di essere passato dal mio sito! Sono un ricercatore, Ph.D. candidate alla Humboldt Universität zu Berlin, mi occupo di libero arbitrio, e meccanismi di formazione delle intenzioni. Ho altri interessi che non riguardano direttamente il mio progetto di ricerca, ma che rientrano nell'ambito delle scienze cognitive; in particolare teorie della coscienza, rappresentazionalità in sitemi artificiali, pratiche contemplative e stati alterati di coscienza. Collaboro con the Yogalife Foundation per la loro ricerca sullo yoga e i suoi effetti sulla cognizione umana. Altri interessi più generali che potete scoprire esplorando il sito includono il trekking, la pesistica, varie forme di grappling e wrestling, la cucina, e come aiutare piccoli umani a crescere e diventare adulti felici, resitenti, intelligenti e consapevoli.</p>
                         </div>
                     </div>
                     
-                    <!--p>Qui sotto qualche altra foto mia (nel bosco e non), e degli sfondi per il desktop rilassanti.</p>
-                    <h3><a href="galleria_personale/galleria.html">Immagini rilassanti e foto di uno scoppiato:</a></h3>
-                    <div class="lightbox-gallery">
-                        <a class="lightbox" href="#a">
-                            <img src="immagini/OI000044.JPG" width="204" height="153" alt="foresta della lama, primi di aprile 2019" />
+                    <!-- Gallery Section -->
+                    <div style="margin-top: 2rem;">
+                        <h3>Galleria Personale</h3>
+                        <p>Alcune foto dal bosco e immagini rilassanti.</p>
+                        <a href="galleria_personale/galleria.html" style="display: inline-block; margin-top: 1rem; padding: 0.8rem 1.5rem; background: linear-gradient(to right, #f7ae6b, #61c4db); color: white; text-decoration: none; border-radius: 8px; font-weight: 500; transition: transform 0.3s;">
+                            Visita la Galleria →
                         </a>
-                        <div class="lightbox-target" id="a">
-                            <img src="immagini/OI000044.JPG"/>
-                            <a class="lightbox-close" href=""></a>
-                        </div>
-                        <a class="lightbox" href="#c">
-                            <img src="immagini/OI000051.JPG" width="153" height="204" alt="io nella lama" />
-                        </a>
-                        <div class="lightbox-target" id="c">
-                            <img src="immagini/OI000051.JPG"/>
-                            <a class="lightbox-close" href=""></a>
-                        </div>
-                        <a class="lightbox" href="#e">
-                            <img src="immagini/OI000056.JPG" width="204" height="153" alt="lago di Brayes, agosto 2020" />
-                        </a>
-                        <div class="lightbox-target" id="e">
-                            <img src="immagini/OI000056.JPG"/>
-                            <a class="lightbox-close" href=""></a>
-                        </div>
-                    </div-->
+                    </div>
                 </div>
             </div>
 

@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-    <link rel="stylesheet" href="../CSS/global.css">
+     <link rel="stylesheet" href="../CSS/global.css">
     <link rel="stylesheet" href="../CSS/blog.css">
     <link rel="icon" type="image/x-icon" href="../favic.png">
 </head>
 <body>
+    <div class="lang-switch">
+        <span>�🇹</span>
+        <label class="switch">
+            <input type="checkbox" onchange="window.location.href = this.checked ? '../en/Blog/blog2.php' : '../Blog/blog2.php'">
+            <span class="slider round"></span>
+        </label>
+        <span>🇬🇧</span>
+    </div>
+
     <nav class="navbar">
         <div class="navbar-container">
             <img src="../immagini/Ahimsa.png" alt="Navbar Logo" class="navbar-logo">
@@ -31,7 +40,7 @@
     <!-- Secondary Banner - Easy to show/hide by commenting out -->
     <div class="secondary-banner">
         <div class="secondary-banner-content">
-            <p><strong>Latest Update:</strong> Welcome to our updated blog! Check out our latest research findings.</p>
+            <p><strong>Ultimo Aggiornamento:</strong> Benvenuto nel nostro blog aggiornato! Scopri i nostri ultimi risultati di ricerca.</p>
         </div>
     </div>
     <!-- End Secondary Banner -->
@@ -95,11 +104,11 @@
         // Display pinned posts first
         if(!empty($pinnedPosts)): ?>
             <section class="pinned-section">
-                <h2 class="section-title">📌 Pinned Posts</h2>
+                <h2 class="section-title">📌 Post in Evidenza</h2>
                 <?php foreach($pinnedPosts as $post): ?>
                     <article class="blog-preview pinned-post">
                         <h3><a href="<?php echo $postsDir . $post['file']; ?>"><?php echo htmlspecialchars($post['title']); ?></a></h3>
-                        <div class="post-meta">📌 Pinned • Posted on <?php echo $post['date']; ?></div>
+                        <div class="post-meta">📌 In Evidenza • Pubblicato il <?php echo $post['date']; ?></div>
                         
                         <?php if($post['image']): ?>
                             <div class="post-image">
@@ -117,13 +126,13 @@
         <?php if(!empty($regularPosts)): ?>
             <section class="regular-posts">
                 <?php if(!empty($pinnedPosts)): ?>
-                    <h2 class="section-title">Recent Posts</h2>
+                    <h2 class="section-title">Post Recenti</h2>
                 <?php endif; ?>
                 
                 <?php foreach($regularPosts as $post): ?>
                     <article class="blog-preview">
                         <h3><a href="<?php echo $postsDir . $post['file']; ?>"><?php echo htmlspecialchars($post['title']); ?></a></h3>
-                        <div class="post-meta">Posted on <?php echo $post['date']; ?></div>
+                        <div class="post-meta">Pubblicato il <?php echo $post['date']; ?></div>
                         
                         <?php if($post['image']): ?>
                             <div class="post-image">
@@ -139,7 +148,7 @@
 
         <?php if(empty($pinnedPosts) && empty($regularPosts)): ?>
             <div class="no-posts">
-                <p>No blog posts found. Check back soon for new content!</p>
+                <p>Nessun post trovato. Torna presto per nuovi contenuti!</p>
             </div>
         <?php endif; ?>
     </main>

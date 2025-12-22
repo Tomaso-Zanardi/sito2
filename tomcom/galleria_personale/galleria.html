@@ -1,79 +1,329 @@
-<!DOCATYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale= 1.0">
-<title>Visualizzatore di immagini stile Lightbox</title>
-<link rel="stylesheet" href="../CSS/style_galleria.css">
-<link rel="lightbox" href="lightbox.css"
-    </head>
-    <body>
-        <div class="topnav">
-            <a href="../index.html">Home</a>
-          </div>  
-        <div class="container">
-            <div class="gallery">
-                <a href="../galleria/1.JPG" data-lightbox="paesaggi" data-title="caption1">
-                    <img src="../galleria/1.JPG">
-                </a>
-                <a href="../galleria/2.JPG" data-lightbox="paesaggi" data-title="caption1">
-                    <img src="../galleria/2.JPG">
-                </a>
-                <a href="../galleria/3.JPG" data-lightbox="paesaggi" data-title="caption1">
-                    <img src="../galleria/3.JPG">
-                </a>
-                <a href="../galleria/4.JPG" data-lightbox="paesaggi" data-title="caption1">
-                    <img src="../galleria/4.JPG">
-                </a>
-                <a href="../galleria/5.JPG" data-lightbox="paesaggi" data-title="caption1">
-                    <img src="../galleria/5.JPG">
-                </a>
-                <a href="../galleria/6.JPG" data-lightbox="paesaggi" data-title="caption1">
-                    <img src="../galleria/6.JPG">
-                </a>
-                <a href="../galleria/7.JPG" data-lightbox="paesaggi" data-title="caption1">
-                    <img src="../galleria/7.JPG">
-                </a>
-                <a href="../galleria/8.JPG" data-lightbox="paesaggi" data-title="caption1">
-                    <img src="../galleria/8.JPG">
-                </a>
-                <a href="../galleria/9.JPG" data-lightbox="paesaggi" data-title="caption1">
-                    <img src="../galleria/9.JPG">
-                </a>
-                <a href="../galleria/10.JPG" data-lightbox="paesaggi" data-title="caption1">
-                    <img src="../galleria/10.JPG">
-                </a>
-                <a href="../galleria/11.JPG" data-lightbox="paesaggi" data-title="caption1">
-                    <img src="../galleria/11.JPG">
-                </a>
-                <a href="../galleria/12.JPG" data-lightbox="paesaggi" data-title="caption1">
-                    <img src="../galleria/12.JPG">
-                </a>
-                <a href="../galleria/13.JPG" data-lightbox="paesaggi" data-title="caption1">
-                    <img src="../galleria/13.JPG">
-                </a>
-                <a href="../galleria/14.JPG" data-lightbox="paesaggi" data-title="caption1">
-                    <img src="../galleria/14.JPG">
-                </a>
-                <a href="../galleria/15.JPG" data-lightbox="paesaggi" data-title="caption1">
-                    <img src="../galleria/15.JPG">
-                </a>
-                <a href="../galleria/16.JPG" data-lightbox="paesaggi" data-title="caption1">
-                    <img src="../galleria/16.JPG">
-                </a>
-                <a href="../galleria/17.JPG" data-lightbox="paesaggi" data-title="caption1">
-                    <img src="../galleria/17.JPG">
-                </a>
-                <a href="../galleria/18.JPG" data-lightbox="paesaggi" data-title="caption1">
-                    <img src="../galleria/18.JPG">
-                </a>
-                <a href="../galleria/19.JPG" data-lightbox="paesaggi" data-title="caption1">
-                    <img src="../galleria/19.JPG">
-                </a>
-                <a href="../galleria/20.JPG" data-lightbox="paesaggi" data-title="caption1">
-                    <img src="../galleria/20.JPG">
-                </a>
-           
-            </div>>
-            </div>>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galleria Personale - Tomaso Zanardi</title>
+    <link rel="stylesheet" href="../CSS/global.css">
+    <link rel="icon" type="image/x-icon" href="../favic.png">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .gallery-header {
+            background: linear-gradient(to right, #f7ae6b, #61c4db);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .gallery-header h1 {
+            margin: 0 0 0.5rem 0;
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+
+        .gallery-header p {
+            margin: 0;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .gallery-container {
+            max-width: 1400px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            background-color: white;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Lightbox Modal */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .lightbox.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90vh;
+            position: relative;
+        }
+
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 3rem;
+            color: white;
+            cursor: pointer;
+            z-index: 2001;
+            transition: color 0.3s;
+        }
+
+        .lightbox-close:hover {
+            color: #f7ae6b;
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 3rem;
+            color: white;
+            cursor: pointer;
+            padding: 1rem;
+            user-select: none;
+            transition: color 0.3s;
+        }
+
+        .lightbox-nav:hover {
+            color: #f7ae6b;
+        }
+
+        .lightbox-prev {
+            left: 20px;
+        }
+
+        .lightbox-next {
+            right: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 1rem;
+            }
+
+            .gallery-header h1 {
+                font-size: 2rem;
+            }
+
+            .lightbox-nav {
+                font-size: 2rem;
+                padding: 0.5rem;
+            }
+
+            .lightbox-close {
+                font-size: 2rem;
+                top: 10px;
+                right: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="lang-switch">
+        <span>�🇹</span>
+        <label class="switch">
+            <input type="checkbox" onchange="window.location.href = this.checked ? '../en/galleria_personale/galleria.html' : '../galleria_personale/galleria.html'">
+            <span class="slider round"></span>
+        </label>
+        <span>🇬🇧</span>
+    </div>
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <img src="../immagini/Ahimsa.png" alt="Navbar Logo" class="navbar-logo">
+            <div class="navbar-links">
+                <a href="../index.php">Home</a>
+                <a href="../CV/about_page.php">Curriculum Vitae</a>
+                <a href="../Biblioteca/login.html">Biblioteca</a>
+                <a href="../Blog/blog2.php">Blog</a>
+                <a href="../contatti/FORMA.php">Contatti</a>
+                <a href="../Donazioni/Donazioni.php">Donazioni</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="gallery-header">
+        <h1>Galleria Personale</h1>
+        <p>Foto dal bosco e momenti di natura</p>
+    </header>
+
+    <div class="gallery-container">
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openLightbox(0)">
+                <img src="../galleria/1.JPG" alt="Foto 1">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(1)">
+                <img src="../galleria/2.JPG" alt="Foto 2">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(2)">
+                <img src="../galleria/3.JPG" alt="Foto 3">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(3)">
+                <img src="../galleria/4.JPG" alt="Foto 4">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(4)">
+                <img src="../galleria/5.JPG" alt="Foto 5">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(5)">
+                <img src="../galleria/6.JPG" alt="Foto 6">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(6)">
+                <img src="../galleria/7.JPG" alt="Foto 7">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(7)">
+                <img src="../galleria/8.JPG" alt="Foto 8">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(8)">
+                <img src="../galleria/9.JPG" alt="Foto 9">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(9)">
+                <img src="../galleria/10.JPG" alt="Foto 10">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(10)">
+                <img src="../galleria/11.JPG" alt="Foto 11">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(11)">
+                <img src="../galleria/12.JPG" alt="Foto 12">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(12)">
+                <img src="../galleria/13.JPG" alt="Foto 13">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(13)">
+                <img src="../galleria/14.JPG" alt="Foto 14">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(14)">
+                <img src="../galleria/15.JPG" alt="Foto 15">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(15)">
+                <img src="../galleria/16.JPG" alt="Foto 16">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(16)">
+                <img src="../galleria/17.JPG" alt="Foto 17">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(17)">
+                <img src="../galleria/18.JPG" alt="Foto 18">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(18)">
+                <img src="../galleria/19.JPG" alt="Foto 19">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(19)">
+                <img src="../galleria/20.JPG" alt="Foto 20">
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <span class="lightbox-close" onclick="closeLightbox(event)">&times;</span>
+        <span class="lightbox-nav lightbox-prev" onclick="changeImage(-1, event)">&#10094;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Immagine ingrandita">
+        </div>
+        <span class="lightbox-nav lightbox-next" onclick="changeImage(1, event)">&#10095;</span>
+    </div>
+
+    <script>
+        const images = [
+            '../galleria/1.JPG', '../galleria/2.JPG', '../galleria/3.JPG', '../galleria/4.JPG',
+            '../galleria/5.JPG', '../galleria/6.JPG', '../galleria/7.JPG', '../galleria/8.JPG',
+            '../galleria/9.JPG', '../galleria/10.JPG', '../galleria/11.JPG', '../galleria/12.JPG',
+            '../galleria/13.JPG', '../galleria/14.JPG', '../galleria/15.JPG', '../galleria/16.JPG',
+            '../galleria/17.JPG', '../galleria/18.JPG', '../galleria/19.JPG', '../galleria/20.JPG'
+        ];
         
-    </body>
+        let currentImageIndex = 0;
+
+        function openLightbox(index) {
+            currentImageIndex = index;
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = images[currentImageIndex];
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox(event) {
+            if (event.target.id === 'lightbox' || event.target.classList.contains('lightbox-close')) {
+                const lightbox = document.getElementById('lightbox');
+                lightbox.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function changeImage(direction, event) {
+            event.stopPropagation();
+            currentImageIndex += direction;
+            
+            if (currentImageIndex < 0) {
+                currentImageIndex = images.length - 1;
+            } else if (currentImageIndex >= images.length) {
+                currentImageIndex = 0;
+            }
+            
+            document.getElementById('lightbox-img').src = images[currentImageIndex];
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            const lightbox = document.getElementById('lightbox');
+            if (lightbox.classList.contains('active')) {
+                if (e.key === 'ArrowLeft') {
+                    changeImage(-1, e);
+                } else if (e.key === 'ArrowRight') {
+                    changeImage(1, e);
+                } else if (e.key === 'Escape') {
+                    closeLightbox({target: lightbox});
+                }
+            }
+        });
+    </script>
+</body>
+</html>
