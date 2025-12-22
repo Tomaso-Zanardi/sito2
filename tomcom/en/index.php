@@ -10,12 +10,12 @@
 </head>
 <body>
     <div class="lang-switch">
-        <span>🇬🇧</span>
+        <span>🇮🇹</span>
         <label class="switch">
-            <input type="checkbox" onchange="window.location.href = this.checked ? '../index.php' : 'index.php'">
+            <input type="checkbox" checked onchange="window.location.href = this.checked ? 'index.php' : '../index.php'">
             <span class="slider round"></span>
         </label>
-        <span>🇮🇹</span>
+        <span>🇬🇧</span>
     </div>
 
     <nav class="navbar">

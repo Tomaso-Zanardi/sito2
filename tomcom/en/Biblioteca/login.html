@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="icon" type="image/x-icon" href="../../favic.png">
+    <link rel="stylesheet" href="../../CSS/global.css">
+    <link rel="stylesheet" href="../../CSS/2.css">
+    <style>
+        body {
+            display: block !important;
+            height: auto !important;
+            min-height: 100vh;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        .form-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 80px);
+            background: linear-gradient(to right, #f7ae6b, #61c4db);
+            padding: 2rem 0;
+        }
+        .biblioteca-header {
+            background: linear-gradient(to right, #f7ae6b, #61c4db);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .biblioteca-header h1 {
+            margin: 0 0 0.5rem 0;
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+        .biblioteca-header p {
+            margin: 0;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="lang-switch">
+        <span>🇮🇹</span>
+        <label class="switch">
+            <input type="checkbox" checked onchange="window.location.href = this.checked ? '../Biblioteca/login.html' : '../../Biblioteca/login.html'">
+            <span class="slider round"></span>
+        </label>
+        <span>🇬🇧</span>
+    </div>
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <img src="../../immagini/Ahimsa.png" alt="Navbar Logo" class="navbar-logo">
+            <div class="navbar-links">
+                <a href="../index.php">Home</a>
+                <a href="../CV/about_page.php">Curriculum Vitae</a>
+                <a href="../Blog/blog2.php">Blog</a>
+                <a href="../contatti/FORMA.php">Contact</a>
+                <a href="../Donazioni/Donazioni.php">Donations</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="biblioteca-header">
+        <h1>Library</h1>
+        <p>Restricted Area - Coming Soon</p>
+    </header>
+    
+    <div class="form-wrapper">
+        <div class="container">
+            <div style="text-align: center; padding: 2rem;">
+                <h2>Section Under Construction</h2>
+                <p>The digital library will be available soon.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="validation.js"></script>
+</body>
+</html>
