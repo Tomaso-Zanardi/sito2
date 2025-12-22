@@ -8,7 +8,14 @@
     <link rel="stylesheet" href="../../CSS/blog.css">
     <link rel="icon" type="image/x-icon" href="../../favic.png">
 </head>
-<body>
+<body>    <div class="night-mode-toggle">
+        <span>☀️</span>
+        <label class="switch">
+            <input type="checkbox" id="nightModeToggle">
+            <span class="slider round"></span>
+        </label>
+        <span>🌙</span>
+    </div>
     <div class="lang-switch">
         <span>🇮🇹</span>
         <label class="switch">
@@ -152,5 +159,6 @@
             </div>
         <?php endif; ?>
     </main>
+    <script src="../../night-mode.js"></script>
 </body>
 </html>

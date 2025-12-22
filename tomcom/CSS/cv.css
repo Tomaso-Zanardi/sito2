@@ -169,3 +169,50 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* Night Mode Styles */
+body.night-mode .about-content {
+    background-color: #0a0a0a;
+}
+
+body.night-mode .profile-section,
+body.night-mode .cv-section,
+body.night-mode .interests-section,
+body.night-mode .facts-section,
+body.night-mode .contact-cta {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+body.night-mode .profile-text h2,
+body.night-mode .cv-card h3,
+body.night-mode .interests-section h2,
+body.night-mode .contact-cta h2 {
+    color: #f0f0f0;
+}
+
+body.night-mode .profile-text p,
+body.night-mode .cv-card p,
+body.night-mode .interest-item p,
+body.night-mode .contact-cta p {
+    color: #d0d0d0;
+}
+
+body.night-mode .interest-item {
+    background-color: #2a2a2a;
+    border-left-color: #8B4513;
+}
+
+body.night-mode .interest-item h4 {
+    color: #f0f0f0;
+}
+
+body.night-mode .cv-btn,
+body.night-mode .cta-btn {
+    background: linear-gradient(to right, #8B4513, #0C1445);
+}
+
+body.night-mode .cv-info,
+body.night-mode .fact-label {
+    color: #888;
+}

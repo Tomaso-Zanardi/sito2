@@ -40,6 +40,17 @@ body {
     gap: 0.5rem;
 }
 
+/* Night Mode Toggle Styles */
+.night-mode-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 10rem;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 .switch {
     position: relative;
     display: inline-block;
@@ -237,4 +248,147 @@ input:checked + .slider:before {
     .donation-header h1 {
         font-size: 2rem;
     }
+}
+
+/* Night Mode Styles */
+body.night-mode {
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+}
+
+/* Navbar - no gradient in night mode */
+body.night-mode .navbar {
+    background-color: #1a1a1a;
+}
+
+body.night-mode .navbar-links a {
+    color: #e0e0e0;
+}
+
+body.night-mode .navbar-links a:hover {
+    color: #f7ae6b;
+}
+
+/* Headers and hero sections with dark gradient */
+body.night-mode .gallery-header,
+body.night-mode .hero-section,
+body.night-mode .logone,
+body.night-mode .form-wrapper,
+body.night-mode .blog-header,
+body.night-mode .about-header,
+body.night-mode .biblioteca-header,
+body.night-mode .cv-header,
+body.night-mode .donation-header {
+    background: linear-gradient(to right, #8B4513, #0C1445) !important;
+}
+
+/* Content containers and cards */
+body.night-mode .container,
+body.night-mode .blog-preview,
+body.night-mode .about-section,
+body.night-mode .side,
+body.night-mode .main,
+body.night-mode .content-row {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+/* About section and preview modals */
+body.night-mode .about-preview,
+body.night-mode .authors-container,
+body.night-mode .about-full .modal-content {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+}
+
+body.night-mode .about-full {
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+body.night-mode .preview-text {
+    color: #b0b0b0;
+}
+
+body.night-mode .profile-img,
+body.night-mode .profile-img-large {
+    border-color: #444;
+}
+
+/* Form elements */
+body.night-mode .form-control,
+body.night-mode input[type="text"],
+body.night-mode input[type="email"],
+body.night-mode input[type="number"],
+body.night-mode textarea {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+body.night-mode .form-control::placeholder {
+    color: #666;
+}
+
+body.night-mode .btn {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    border-color: #666;
+}
+
+body.night-mode .btn:hover {
+    border-color: #f7ae6b;
+    color: #f7ae6b;
+}
+
+/* Footer */
+body.night-mode .footer {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+body.night-mode .social-link {
+    color: #e0e0e0;
+}
+
+body.night-mode .social-link:hover {
+    color: #f7ae6b;
+}
+
+/* Gallery */
+body.night-mode .gallery-item {
+    background-color: #1a1a1a;
+}
+
+body.night-mode .lightbox {
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+/* Articles and featured sections */
+body.night-mode .featured-section,
+body.night-mode .articles-section,
+body.night-mode article {
+    background-color: #1a1a1a;
+}
+
+body.night-mode .featured-img {
+    border-color: #444;
+}
+
+/* Text colors */
+body.night-mode h1,
+body.night-mode h2,
+body.night-mode h3,
+body.night-mode h4,
+body.night-mode h5,
+body.night-mode h6 {
+    color: #f0f0f0;
+}
+
+body.night-mode p,
+body.night-mode a:not(.navbar-links a):not(.social-link) {
+    color: #d0d0d0;
+}
+
+body.night-mode .row {
+    background-color: transparent;
 }

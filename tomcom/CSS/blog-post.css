@@ -154,3 +154,51 @@ pre code {
         font-size: 1rem;
     }
 }
+
+/* Night Mode Styles */
+body.night-mode {
+    background: linear-gradient(to right, #8B4513, #0C1445);
+}
+
+body.night-mode .article-container {
+    background: #1a1a1a;
+    color: #e0e0e0;
+}
+
+body.night-mode h1,
+body.night-mode h2,
+body.night-mode h3 {
+    color: #f0f0f0;
+}
+
+body.night-mode h1 {
+    border-bottom-color: #0C1445;
+}
+
+body.night-mode p,
+body.night-mode li {
+    color: #d0d0d0;
+}
+
+body.night-mode a {
+    color: #61c4db;
+}
+
+body.night-mode a:hover {
+    border-bottom-color: #61c4db;
+}
+
+body.night-mode blockquote {
+    background: #2a2a2a;
+    border-left-color: #0C1445;
+    color: #d0d0d0;
+}
+
+body.night-mode code {
+    background: #2a2a2a;
+    color: #e0e0e0;
+}
+
+body.night-mode .back-button {
+    background: linear-gradient(to right, #8B4513, #0C1445);
+}

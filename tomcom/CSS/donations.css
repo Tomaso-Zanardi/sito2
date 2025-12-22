@@ -160,3 +160,50 @@
         padding: 2rem 1rem;
     }
 }
+
+/* Night Mode Styles */
+body.night-mode .donation-content {
+    background-color: #0a0a0a;
+}
+
+body.night-mode .donation-container {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+body.night-mode .donation-intro h2,
+body.night-mode .donation-contact h3 {
+    color: #f0f0f0;
+}
+
+body.night-mode .donation-intro p,
+body.night-mode .donation-card p,
+body.night-mode .donation-contact p {
+    color: #d0d0d0;
+}
+
+body.night-mode .donation-card {
+    background-color: #2a2a2a;
+    border-color: #444;
+}
+
+body.night-mode .donation-card:hover {
+    border-color: #8B4513;
+}
+
+body.night-mode .card-header h3 {
+    color: #f0f0f0;
+}
+
+body.night-mode .bank-btn {
+    background: linear-gradient(to right, #8B4513, #0C1445);
+}
+
+body.night-mode .bank-details {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+}
+
+body.night-mode .donation-contact {
+    border-top-color: #444;
+}
